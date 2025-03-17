@@ -1,0 +1,271 @@
+:root {
+    --color-primary: #9e0101d1;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #1126e275;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 70%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 32px 32px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 20px;
+}
+
+.button-container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+button {
+    padding: 15px 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    background-color: #df4605;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    gap: 10px; /* Espaciado entre el ícono y el texto */
+    text-align: center;
+    width: 100%; /* Asegura que el botón se expanda correctamente */
+}
+
+.button-draw img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+.result-list {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #05DF05; /* Verde brillante */
+}
+
+.button-clear, .button-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-clear {
+    background-color:#0f00e6fd; /* Amarillo */
+    color: #FFFFFF;
+}
+
+.button-clear:hover {
+    background-color: #0041e6fd;
+}
+
+.button-reset {
+    background-color: #761919; /* Rojo */
+    color: white;
+}
+
+.button-reset:hover {
+    background-color: var(--color-primary);;
+}
+
+.button-clear img, .button-reset img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.instructions-box {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 250px;
+    background-color: var(--color-secondary);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--color-primary);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: var(--color-text);
+}
+.instructions-box h2 {
+    font-size: 18px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.instructions-box p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+@media (max-width: 1000px) {
+    .button-container {
+        flex-direction: column; /* Apila los botones verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .instructions-box {
+        position: relative; /* Asegura que esté dentro del flujo normal del documento */
+        width: 90%;
+        margin-top: 20px; /* Espacio entre los botones y el cuadro de instrucciones */
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-banner {
+        flex-direction: column; /* Asegura que la imagen y el título estén en columna */
+        align-items: center; /* Centra los elementos */
+        text-align: center;
+    }
+
+    .main-title {
+        order: 1; /* Mueve el título después de la imagen */
+        margin-top: 20px; /* Agrega un poco de espacio */
+    }
+
+    .header-banner img {
+        order: 0; /* Asegura que la imagen quede arriba */
+    }
+
+    .section-title {
+        order: 2; /* Mantiene el título h2 debajo del título principal */
+    }
+}
